@@ -99,6 +99,18 @@ body {
   cursor: pointer;
 }
 
+body.dark {
+  background: #111;
+  color: white;
+}
+
+body.dark .site-header {
+  background: #000;
+}
+
+body.dark .project {
+  border-color: #444;
+}
 
 
 @media (max-width: 768px) {
