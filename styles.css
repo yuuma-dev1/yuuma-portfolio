@@ -4,11 +4,9 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 800px;
-  margin: auto;
+  width: min(90%, 800px);
+  margin-inline: auto;
 }
-
 .site-header {
   background: black;
   color: white;
