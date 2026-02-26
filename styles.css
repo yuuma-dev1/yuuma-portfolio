@@ -45,4 +45,9 @@ body {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  transition: opacity 0.3s;
+}
+
+.nav-list a:hover {
+  opacity: 0.6;
 }
