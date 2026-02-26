@@ -78,15 +78,21 @@ body {
 
 
 
-
-
 @media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
-  }
+
   .global-nav {
     display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: black;
+    padding: 20px;
   }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
 }
 
 
