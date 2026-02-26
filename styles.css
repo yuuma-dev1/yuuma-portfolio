@@ -7,6 +7,7 @@ body {
   width: min(90%, 800px);
   margin-inline: auto;
 }
+
 .site-header {
   background: black;
   color: white;
