@@ -84,6 +84,13 @@ body {
   border-bottom: 2px solid white;
 }
 
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
 @media (max-width: 768px) {
 
   .global-nav {
