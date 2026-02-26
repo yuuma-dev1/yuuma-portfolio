@@ -91,6 +91,16 @@ body {
   padding-bottom: 4px;
 }
 
+.theme-toggle {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+
+
 @media (max-width: 768px) {
 
   .global-nav {
