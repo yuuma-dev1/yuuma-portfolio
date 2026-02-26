@@ -75,7 +75,15 @@ body {
   transform: translateY(0);
 }
 
+.site-header {
+  background: black;
+  color: white;
+  padding: 20px 0;
 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
 @media (max-width: 768px) {
 
