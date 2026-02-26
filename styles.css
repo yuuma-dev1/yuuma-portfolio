@@ -51,3 +51,12 @@ body {
 .nav-list a:hover {
   opacity: 0.6;
 }
+
+.nav-toggle {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: none;
+}
