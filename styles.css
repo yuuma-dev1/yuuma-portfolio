@@ -61,14 +61,21 @@ body {
   display: none;
 }
 
-@media (max-width: 768px) {
+.global-nav.is-open {
+  display: block;
+}
 
+
+
+
+
+@media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
-
   .global-nav {
     display: none;
   }
-
 }
+
+
