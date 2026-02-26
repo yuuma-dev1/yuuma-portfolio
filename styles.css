@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.site-header {
+  background: black;
+  color: white;
+  padding: 20px 0;
+}
+
+.hero {
+  padding: 40px 0;
+}
+
+.projects {
+  padding: 40px 0;
+}
+
+.project {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
