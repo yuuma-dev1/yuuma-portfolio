@@ -80,6 +80,10 @@ body {
   z-index: 1000;
 }
 
+.nav-link.is-current {
+  border-bottom: 2px solid white;
+}
+
 @media (max-width: 768px) {
 
   .global-nav {
