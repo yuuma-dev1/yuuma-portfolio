@@ -23,21 +23,30 @@ if (toggle && nav) {
 // =============================
 const reveals = document.querySelectorAll(".reveal");
 
-const observer = new IntersectionObserver((entries) => {
+if ("IntersectionObserver" in window) {
 
-  entries.forEach((entry) => {
+  const observer = new IntersectionObserver((entries) => {
 
-    if (entry.isIntersecting) {
+    entries.forEach((entry) => {
 
-      entry.target.classList.add("is-visible");
+      if (entry.isIntersecting) {
 
-    }
+        entry.target.classList.add("is-visible");
+
+      }
+
+    });
 
   });
 
-});
+  reveals.forEach((el) => observer.observe(el));
 
-reveals.forEach((el) => observer.observe(el));
+} else {
+
+  // 古いブラウザ用フォールバック
+  reveals.forEach((el) => el.classList.add("is-visible"));
+
+}
 
 
 // =============================
@@ -45,7 +54,6 @@ reveals.forEach((el) => observer.observe(el));
 // =============================
 const themeBtn = document.getElementById("theme-toggle");
 
-// 保存されたテーマ読み込み
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
@@ -54,7 +62,6 @@ if (savedTheme === "dark") {
 
 }
 
-// ボタンクリックで切替＋保存
 if (themeBtn) {
 
   themeBtn.addEventListener("click", () => {
@@ -81,7 +88,7 @@ if (themeBtn) {
 // =============================
 const links = document.querySelectorAll(".nav-link");
 
-const current = location.pathname.split("/").pop();
+const current = location.pathname.split("/").pop() || "index.html";
 
 links.forEach((link) => {
 
