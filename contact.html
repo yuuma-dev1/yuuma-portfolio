@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Yuuma Portfolio</title>
 
+  <meta name="description" content="Yuumaのポートフォリオサイトのコンタクトページです。">
+
   <link rel="stylesheet" href="styles.css">
   <script src="main.js" defer></script>
 </head>
@@ -14,7 +16,9 @@
 <header class="site-header">
   <div class="container header-inner">
 
-    <h1 class="site-logo">Yuuma Portfolio</h1>
+    <h1 class="site-logo">
+      <a href="index.html" class="nav-link">Yuuma Portfolio</a>
+    </h1>
 
     <button class="nav-toggle" id="nav-toggle">
       ☰
@@ -23,14 +27,16 @@
     <nav class="global-nav" id="global-nav">
       <ul class="nav-list">
         <li><a href="index.html" class="nav-link">Home</a></li>
-<li><a href="projects.html" class="nav-link">Projects</a></li>
-<li><a href="company.html" class="nav-link">Company</a></li>
-<li><a href="contact.html" class="nav-link">Contact</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="company.html" class="nav-link">Company</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
-     <button class="theme-toggle" id="theme-toggle">
-        🌙
-      </button>
+
+    <button class="theme-toggle" id="theme-toggle">
+      🌙
+    </button>
+
   </div>
 </header>
 
@@ -41,7 +47,7 @@
 
       <h2>Contact</h2>
 
-      <form class="contact-form">
+      <form class="contact-form" action="#" method="post">
 
         <div class="form-group">
           <label for="name">お名前</label>
@@ -68,6 +74,12 @@
 
   </div>
 </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 Yuuma Portfolio</p>
+  </div>
+</footer>
 
 </body>
 </html>
