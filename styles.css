@@ -9,18 +9,18 @@ body {
 }
 
 
-.hero {
-  padding: 40px 0;
-}
+/* =========================
+   Header
+========================= */
 
-.projects {
-  padding: 40px 0;
-}
+.site-header {
+  background: black;
+  color: white;
+  padding: 20px 0;
 
-.project {
-  padding: 20px;
-  border: 1px solid #ddd;
-  margin-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header-inner {
@@ -29,22 +29,39 @@ body {
   align-items: center;
 }
 
+
+/* =========================
+   Navigation
+========================= */
+
 .nav-list {
   display: flex;
   gap: 20px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-list a {
+.nav-link {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  padding-bottom: 4px;
   transition: opacity 0.3s;
 }
 
-.nav-list a:hover {
+.nav-link:hover {
   opacity: 0.6;
 }
+
+.nav-link.is-current {
+  border-bottom: 2px solid white;
+}
+
+
+/* =========================
+   Mobile Nav Toggle
+========================= */
 
 .nav-toggle {
   font-size: 24px;
@@ -59,6 +76,43 @@ body {
   display: block;
 }
 
+
+/* =========================
+   Theme Toggle
+========================= */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   Sections
+========================= */
+
+.hero {
+  padding: 40px 0;
+}
+
+.projects {
+  padding: 40px 0;
+}
+
+.project {
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   Scroll Animation
+========================= */
+
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -70,98 +124,10 @@ body {
   transform: translateY(0);
 }
 
-.site-header {
-  background: black;
-  color: white;
-  padding: 20px 0;
 
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-link.is-current {
-  border-bottom: 2px solid white;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding-bottom: 4px;
-}
-
-.theme-toggle {
-  background: none;
-  border: 1px solid white;
-  color: white;
-  padding: 6px 10px;
-  cursor: pointer;
-}
-
-body.dark {
-  background: #111;
-  color: white;
-}
-
-body.dark .site-header {
-  background: #000;
-}
-
-body.dark .project {
-  border-color: #444;
-}
-
-
-@media (max-width: 768px) {
-
-  .global-nav {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: black;
-    padding: 20px;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-}
-
-.contact-form {
-  max-width: 600px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.form-group textarea {
-  min-height: 120px;
-}
-
-.btn {
-  padding: 10px 20px;
-  background: black;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
+/* =========================
+   Contact Form
+========================= */
 
 .contact-form {
   max-width: 600px;
@@ -187,11 +153,9 @@ body.dark .project {
   font-size: 16px;
   font-family: inherit;
   box-sizing: border-box;
-
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* フォーカス時（クリック時） */
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
@@ -199,11 +163,11 @@ body.dark .project {
   box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
 }
 
-/* textareaサイズ */
 .form-group textarea {
   min-height: 120px;
   resize: vertical;
 }
+
 
 /* =========================
    Button
@@ -217,7 +181,6 @@ body.dark .project {
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-
   transition: background 0.3s, transform 0.1s;
 }
 
@@ -227,4 +190,60 @@ body.dark .project {
 
 .btn:active {
   transform: translateY(1px);
+}
+
+
+/* =========================
+   Dark Mode
+========================= */
+
+body.dark {
+  background: #111;
+  color: white;
+}
+
+body.dark .site-header {
+  background: #000;
+}
+
+body.dark .project {
+  border-color: #444;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+.site-footer {
+  background: black;
+  color: white;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .global-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: black;
+    padding: 20px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
 }
