@@ -66,3 +66,8 @@ https://yuuma-dev1.github.io/yuuma-portfolio/
 
 フロントエンドエンジニアとして就職するため、  
 JavaScriptを使用したWebサイト制作スキルを証明する目的で作成しました。
+
+---
+
+##制作期間
+制作期間：2026年2月
