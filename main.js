@@ -32,3 +32,17 @@ const themeBtn = document.getElementById("theme-toggle");
 themeBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
+
+const links = document.querySelectorAll(".nav-link");
+
+const current = location.pathname.split("/").pop();
+
+links.forEach((link) => {
+
+  if (link.getAttribute("href") === current) {
+
+    link.classList.add("is-current");
+
+  }
+
+});
