@@ -1,9 +1,7 @@
 "use strict";
 
 
-// =============================
-// ナビ開閉（スマホ用）
-// =============================
+
 const toggle = document.getElementById("nav-toggle");
 const nav = document.getElementById("global-nav");
 
@@ -18,9 +16,6 @@ if (toggle && nav) {
 }
 
 
-// =============================
-// スクロール表示アニメーション
-// =============================
 const reveals = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
@@ -49,9 +44,6 @@ if ("IntersectionObserver" in window) {
 }
 
 
-// =============================
-// テーマ切替（保存機能付き）
-// =============================
 const themeBtn = document.getElementById("theme-toggle");
 
 const savedTheme = localStorage.getItem("theme");
@@ -83,9 +75,7 @@ if (themeBtn) {
 }
 
 
-// =============================
-// 現在ページのナビに下線つける
-// =============================
+
 const links = document.querySelectorAll(".nav-link");
 
 const current = location.pathname.split("/").pop() || "index.html";
